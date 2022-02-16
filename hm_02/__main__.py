@@ -1,9 +1,6 @@
 import os
-# import fibonacci
-# from fibonacci import calc_fibonacci
-# from PIL import Image
-from ExampleGeneratorOfAST import generate_image
-from ExampleGeneratorOfAST import fib
+from ast-builder-from-fi import make_tree
+from ast-builder-from-fi import calc_fibonacci
 
 def makeList(n):
     lst = [[i for i in range(n)] for j in range(1, 2*n)]
@@ -43,7 +40,7 @@ def medium(lst, scale, picture):
     string = "\n\\includegraphics[scale=" + str(scale) + "]{" + picture + "}\n"
     lst = [table, string]
 
-    generate_image.generate_image(fib.fib)
+    make_tree.make_tree(calc_fibonacci)
 
     initializeLatexFile("my_tex.tex", lst)
 

@@ -1,7 +1,7 @@
 import inspect
 import networkx as nx
 import ast
-from Fibonacci import calc_fibonacci
+from fibonacci_calc import calc_fibonacci
 
 class AstGraphGenerator(ast.NodeVisitor):
     def __init__(self):
@@ -9,15 +9,6 @@ class AstGraphGenerator(ast.NodeVisitor):
         self.G = nx.Graph()
         self.node_settings = {}
         self.node_count = 0
-
-    # def __str__(self):
-    #     return self.G
-
-    # return line number in original code
-    # def _getid(self, node):
-    #     lineno = node.lineno - 1
-    #     print(lineno)
-    #     return type(node)
 
     def get_name(self, node):
         return node.__class__.__name__

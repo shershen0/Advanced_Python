@@ -1,10 +1,10 @@
 import setuptools
 
 setuptools.setup(
-    name="ast-builder-from-fib",
+    name="ASTBuilderFib",
     version="2.0",
     author="Sheremeev Andrey",
-    description="AST builder from function",
+    description="AST builder",
     url="https://github.com/shershen0/Advanced_Python",
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
