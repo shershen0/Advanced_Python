@@ -1,6 +1,6 @@
 import os
-from ast-builder-from-fi import make_tree
-from ast-builder-from-fi import calc_fibonacci
+# from ast-builder-from-fi import make_tree
+# from ast-builder-from-fi import calc_fibonacci
 
 def makeList(n):
     lst = [[i for i in range(n)] for j in range(1, 2*n)]
@@ -31,7 +31,7 @@ def initializeLatexFile(filename, lst):
     f = open('artifacts/' + filename, 'w')
 
     file = begin + inf + parameters + string + end
-    # print(file)
+    print(file)
     f.write(file)
     f.close()
 
@@ -40,7 +40,7 @@ def medium(lst, scale, picture):
     string = "\n\\includegraphics[scale=" + str(scale) + "]{" + picture + "}\n"
     lst = [table, string]
 
-    make_tree.make_tree(calc_fibonacci)
+    # make_tree.make_tree(calc_fibonacci)
 
     initializeLatexFile("my_tex.tex", lst)
 

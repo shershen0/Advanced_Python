@@ -5,7 +5,6 @@ from fibonacci_calc import calc_fibonacci
 
 class AstGraphGenerator(ast.NodeVisitor):
     def __init__(self):
-        # self.source = source  # lines of the source code
         self.G = nx.Graph()
         self.node_settings = {}
         self.node_count = 0
@@ -108,7 +107,7 @@ class AstGraphGenerator(ast.NodeVisitor):
     #     self._visit_children(node)
 
 
-def main():
+def make_tree():
     with open("Fibonacci.py", "r") as source:
         tree = ast.parse(source.read())
 
@@ -126,4 +125,4 @@ def main():
     G.draw(path="artifacts/Ast.png", format='png')
 
 if __name__ == "__main__":
-    main()
+    make_tree()
