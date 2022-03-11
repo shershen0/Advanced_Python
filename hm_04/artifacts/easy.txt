@@ -1,0 +1,30 @@
+N equals = 107746
+Cycles count = 10
+
+Synchronous calculation
+Time --- 4.260332526
+
+Threading calculation
+Time --- 4.307666821
+
+Multiprocessing calculation
+Time --- 0.98156438
+
+//--------------------
+// quite interesting
+
+N equals = 198215
+Cycles equals = 10
+
+Synchronous calculation
+Time --- 13.842884192
+
+
+Threading calculation
+Time --- 49.651225284999995
+
+
+Multiprocessing calculation
+Time --- 22.912701709000004
+
+//--------------------
